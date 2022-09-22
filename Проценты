@@ -1,0 +1,13 @@
+public static double Calculate(string userInput)
+{
+  var count1 = double.Parse(userInput.Split(' ')[0]);
+	var count1month = double.Parse(userInput.Split(' ')[1]) / 12;
+	var countmonth = double.Parse(userInput.Split(' ')[2]);
+	var a4=0.00;
+	for (int i = 0; i < countmonth; i++)
+	{
+    	a4 = count1 / 100;
+    	count1 = count1 + count1month * a4;
+	}
+	return count1;
+}
